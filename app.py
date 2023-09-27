@@ -12,6 +12,7 @@ CORS(app, resources={r"/get": {"origins": "http://localhost:3000"}})
 # Download tokenization data and stopwords data from the server
 nltk.downloader.download('punkt')
 nltk.downloader.download('stopwords')
+nltk.downloader.download('wordnet')
 
 # Function to fetch data from the API and store it globally
 global_var = None
