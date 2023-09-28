@@ -19,7 +19,7 @@ global_var = None
 
 def get_data_from_api():
     global global_var
-    api_url = 'https://backend69.up.railway.app/get/projects'
+    api_url = 'https://procollabbackend.onrender.com/get/projects'
 
     # Make the GET request
     response = requests.get(api_url)
@@ -27,7 +27,7 @@ def get_data_from_api():
         global_var = response.json()
     else:
         print("Error: Failed to retrieve data from the API")
-        
+        global_var = []   
     global_var = global_var.get('message')
 
 # Create a TF-IDF vectorizer
